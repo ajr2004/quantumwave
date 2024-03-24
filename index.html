@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Form</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    /* Additional styles for container */
+    .wave{
+      box-sizing: border-box;
+      display: block;
+      width: 71px;
+      max-width: initial;
+      height: 80px;
+      border: none;
+      object-fit: cover;
+    }
+    .namer{
+      box-sizing: border-box;
+      flex: 0 0 469px;
+      padding-top: 13px;
+      margin-right: 5px;
+      flex-direction: column;
+    }
+    .containe{
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: center;
+      border: 1px solid black; /* Change border color to black */
+      border-radius: 41px; /* Make container edges rounded */
+      box-shadow: 2px 2px 5px #888888; /* Shadow only on left and bottom */
+      padding: 10px; /* Adjusted padding */
+      width: fit-content; 
+      background-color:rgba(5,130,130,1);
+      color: aliceblue;
+      list-style-type:circle;
+    }
+    .container {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 36px 36px 14px ;
+      margin-right: -19px;
+      border: 1px solid black; /* Change border color to black */
+      border-radius: 20px; /* Make container edges rounded */
+      box-shadow: 2px 2px 5px #888888; /* Shadow only on left and bottom */
+      padding: 10px; /* Adjusted padding */
+      width: fit-content; /* Set container width to fit content */
+    }
+
+    /* Styles for name form */
+    .name {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      align-items: flex-start; /* Align items at the start of the container */
+    }
+
+    .name .big-font {
+      color: gray;
+      font-size: 20px;
+      margin-right: 20px; /* Adjusted margin for better spacing */
+    }
+
+    .name .small-font {
+      font-weight: bold;
+      font-size: 20px;
+    }
+    .signature {
+      display: inline-block;
+      vertical-align: top; /* Align the signature and name vertically */
+    }
+
+    .signature img {
+      height: 50px; 
+      object-fit: cover;
+    }
+    .nam {
+      text-decoration: overline; /* Add underline to the name */
+    }
+    .top{
+      box-sizing: border-box;
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 8px;
+      align-items: flex-end;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .block{
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding-top: 10px;
+      padding-right: 45px;
+      padding-left: 21px;
+      background-color: rgba(2,2,2,1);
+      border-radius: 20px;
+    }
+    .t1{
+      box-sizing: border-box;
+      width: 100%;
+    }
+    .t1 .ps{
+      box-sizing: border-box;
+      width: 100%;
+      margin-top: 15px;
+      border-top: 0.8px solid #e5e5ef;
+
+    }
+    .t{
+      box-sizing: border-box;
+      width: 100%;
+      padding: 14px 25px 34px;
+      background: rgba(255,255,255,1);
+      border-radius: 16px;
+      box-shadow: 1px 2px 24px rgba(13,10,44,0.09);
+    }
+    .i{
+      box-sizing: border-box;
+      flex: 0 0 auto;
+      min-width: 742px;
+      padding-top: 8px;
+    }
+    .ih{
+      box-sizing: border-box;
+      width: 100%;
+      max-width: initial;
+      height: 79px;
+      padding-top: 17px;
+      padding-right: 40px;
+      padding-left: 40px;
+      font: 700 32px open Sans;
+      color: rgba(255,255,255,1);
+      text-transform: uppercase;
+    }
+    .inter{
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+      align-items: flex-end;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .pro{
+      box-sizing: border-box;
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 8px;
+      align-items: flex-end;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .blue{
+      box-sizing: border-box;
+      display: grid;
+      grid-template-rows: auto auto;
+      gap: 8px;
+      background-color: rgb(87, 205, 205);
+      align-items: flex-start;
+      justify-content: space-between;
+      width: 100%;
+      padding-right: 6px;
+      padding-left: 16px;
+    }
+    .down{
+      box-sizing: border-box;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      align-items: flex-end;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .middle{
+      box-sizing: border-box;
+      display: grid;
+      grid-template-rows: auto auto;
+      gap: 8px;
+      align-items: flex-start;
+      justify-content: space-between;
+      width: 100%;
+      padding-right: 2px;
+      padding-left: 8px;
+    }
+    .left{
+      box-sizing: border-box;
+      display: grid;
+      grid-template-rows: auto auto;
+      gap: 12px;
+      align-items: flex-start;
+      justify-content: space-between;
+      width: 100%;
+      padding-right: 2px;
+      padding-left: 8px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Container for the name form -->
+  <div class="pro">
+    <div class="namer">
+      <div class="top">
+        <img src="assets\img_0_260_220e98.png" class="wave" />
+        <div class="block">
+          <p style="object-fit: cover;"><span style="color: aliceblue; ">Quantum</span><span style="color: darkgreen;">wave</span></p>
+        </div>
+      </div>
+      <div class="containe">
+        <h1>Highlights</h1>
+        <ul>
+          <li>
+            <h3>Problem-Solving Skills</h3>
+            <ul>
+              <p>Proactively researched and implemented new solutions to improve CRM efficiency.</p>
+            </ul>
+          </li>
+          <li>
+            <h3>Feature Development</h3>
+            <ul>
+              <p>Implemented a customer feedback module that resulted in a 15% increase in positive reviews.</p>
+            </ul>
+          </li>
+          <li>
+            <h3>Technical Expertise</h3>
+            <ul>
+              <p>Utilized ReactJS and Redux to create a dynamic and user-friendly interface.</p>
+            </ul>
+          </li>
+          <li>
+            <h3>Team Contribution</h3>
+            <ul>
+              <p>Provided clear and concise documentation, facilitating knowledge sharing within the team.</p>
+            </ul>
+          </li>                
+          <!-- Add more items as needed -->
+        </ul>
+      </div>
+      <div class="container">
+        <form id="loginForm">
+          <div class="name">
+            <label for="nam" class="big-font">Name:</label>
+            <label for="input" class="small-font">Bhubnesh Maharana</label>
+          </div>
+          <div class="name">
+            <label for="nam" class="big-font">College:</label>
+            <label for="input" class="small-font">Parul university</label>
+          </div>
+          <div class="name">
+            <label for="nam" class="big-font">Enrollment id:</label>
+            <label for="input" class="small-font">CU23_317</label>
+          </div>
+          <div class="name">
+            <label for="nam" class="big-font">Email:</label>
+            <label for="input" class="small-font">bhubnesh2002@gmail.com</label>
+          </div>
+          <div class="name">
+            <label for="nam" class="big-font">Verified By:</label>
+            <div class="signature">
+              <img src="assets\img_0_252_10aa99.png" alt="Signature">
+              <div class="nam">
+                HR G. Akhila
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="blue">
+      <div class="inter">  
+        <div class="i">
+          <p class="ih">Internship Evaluation Form </p>
+        </div>
+        <div class="block">
+          <p style="object-fit: cover;">GET STARTED</p>
+        </div>
+      </div>   
+      <div class="down">
+        <div class="middle">
+          <div class="t">
+            <img src="assets\a3.png" >
+          </div>
+          <div class="t">
+            <img src="assets\a4.png" >
+          </div>
+        </div>
+        <div class="right"> 
+          <div class="dur">
+            <div class="block">
+              <p style="object-fit: cover;"><span style="color: aliceblue; ">Duration : </span><span style="color: darkgreen;">3 months</span></p>
+            </div>
+          </div>
+          <div>
+            <img src="assets\a2.png" >
+          </div>
+          <div>
+            <button><img src="assets\a5.png" ></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
